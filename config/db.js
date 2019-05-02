@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 
-const uri = 'mongodb+srv://carlos:d-2611983@blog-data-mosfx.mongodb.net/test?retryWrites=true';
+const uri = '<you-connection-string>';
 const options = {
     reconnectTries: Number.MAX_VALUE,
     poolSize: 10
