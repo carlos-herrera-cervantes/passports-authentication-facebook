@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const FacebookStrategy = require('passport-facebook').Strategy;
 
 const User = require('../api/models/user');
@@ -25,7 +24,7 @@ module.exports = passport => {
         newUser.facebook.email = profile.emails[0].value;
         newUser.facebook.fullName = profile.displayName;
 
-        newUser.findOne({ email: newUser.facebook.email }, (error, user) => {
+        User.findOne({ email: newUser.facebook.email }, (error, user) => {
             if (!user) {
                 newUser.save((error, newUser) => {
                     if (error) {

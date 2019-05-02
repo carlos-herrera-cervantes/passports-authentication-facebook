@@ -6,3 +6,5 @@ const routes = (app, passport) => {
          response.redirect('/success');
     });
 };
+
+module.exports = routes;
